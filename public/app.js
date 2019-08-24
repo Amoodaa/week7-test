@@ -1,13 +1,15 @@
-fetch("/cities")
+fetch('/cities')
   .then(res => res.json())
+  .then(res => res.cities)
   .then(cities => {
-    const table = document.getElementById("cities-table");
+    const table = document.getElementById('cities-table');
+    console.log(cities);
     cities.forEach(c => {
-      const row = document.createElement("tr");
-      const name = document.createElement("td");
+      const row = document.createElement('tr');
+      const name = document.createElement('td');
       name.textContent = c.name;
       row.appendChild(name);
-      const city = document.createElement("td");
+      const city = document.createElement('td');
       city.textContent = c.city;
       row.appendChild(city);
       table.appendChild(row);
