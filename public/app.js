@@ -3,7 +3,6 @@ fetch('/cities')
   .then(res => res.cities)
   .then(cities => {
     const table = document.getElementById('cities-table');
-    console.log(cities);
     cities.forEach(c => {
       const row = document.createElement('tr');
       const name = document.createElement('td');
